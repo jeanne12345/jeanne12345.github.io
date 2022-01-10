@@ -1,1 +1,14 @@
 theme: jekyll-theme-minimal
+title: Website to host the QM2 Graphs 
+description: Website to copy path into the Wix website 
+
+import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+
+names= ['Labour','Conservative','Green','Liberal Democrat']
+values=[100,30,70,60]
+
+fig = go.Figure(data=[go.Pie(labels=names, values=values, hole=.6, marker_colors=['#c51230','#009fe3','#6baf25','#ffb001'])])
+
+fig.update_layout(title_text="Trees planted by 2030 by UK party (in millions)")
+fig.show()
